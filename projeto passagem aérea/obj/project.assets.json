@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\47349403801\\Desktop\\projeto passagem aérea\\projeto passagem aérea.csproj",
+      "projectUniqueName": "C:\\Users\\47349403801\\Desktop\\passagem-aerea\\projeto passagem aérea\\projeto passagem aérea.csproj",
       "projectName": "projeto passagem aérea",
-      "projectPath": "C:\\Users\\47349403801\\Desktop\\projeto passagem aérea\\projeto passagem aérea.csproj",
+      "projectPath": "C:\\Users\\47349403801\\Desktop\\passagem-aerea\\projeto passagem aérea\\projeto passagem aérea.csproj",
       "packagesPath": "C:\\Users\\47349403801\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47349403801\\Desktop\\projeto passagem aérea\\obj\\",
+      "outputPath": "C:\\Users\\47349403801\\Desktop\\passagem-aerea\\projeto passagem aérea\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\47349403801\\AppData\\Roaming\\NuGet\\NuGet.Config",
