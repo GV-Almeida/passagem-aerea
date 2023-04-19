@@ -9,7 +9,7 @@
 
 
 // Ao cadastrar uma passagem ao final o sistema deverá perguntar se gostaria de cadastrar uma nova passagem caso contrário voltar ao menu anterior(S/N).
-Console.BackgroundColor = ConsoleColor.Green;
+
 Console.ForegroundColor = ConsoleColor.Blue;
 Console.WriteLine(@$"|====-------------------------====|");
 Console.WriteLine(@$"|====BEM VINDO AO PASSAGEM.COM====|");
@@ -20,12 +20,12 @@ Console.WriteLine(@$"
 Informe a senha para acessar o menu do PASSAGEM.COM: ");
 string senha = Console.ReadLine();
 
-while (senha != "123")
+while (senha != "123456")
 {
     Console.WriteLine($"Informe uma senha válida: ");
     senha = Console.ReadLine();
 }
-
+Console.ForegroundColor =ConsoleColor.Magenta;
 Console.WriteLine(@$"
 *|==============================|*
 *|ACESSANDO O MENU PASSAGEM.COM!|*
@@ -42,14 +42,15 @@ char opcao = char.Parse(Console.ReadLine());
 
 while (opcao != '1' && opcao != '2' && opcao != '0')
 {
-    Console.WriteLine(@$"Selecione uma opcao válida!
+    Console.WriteLine(@$"Selecione uma opção válida!
  1 - Cadastrar passagem
  2 - Listar passagem
  0 - Sair");
+ 
+    Console.ResetColor();
+
     opcao = char.Parse(Console.ReadLine());
 }
-
-
 
 string[] nome = new string[5];
 
@@ -67,6 +68,8 @@ if (opcao == '1')
     {
 
 
+        Console.ForegroundColor = ConsoleColor.Cyan;
+
         Console.WriteLine($" {i + 1}º Informe o nome do passageiro: ");
         nome[i] = Console.ReadLine();
 
@@ -79,16 +82,25 @@ if (opcao == '1')
         Console.WriteLine($"Informe a data do voo do {i + 1}º passageiro (dd/mm/aaaa): ");
         data[i] = Console.ReadLine();
 
+        Console.ResetColor();
+
     }
 
 }
 
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine(@$"
+Obrigado por suas passagens cadastrar em nosso sistema!");
+Console.ResetColor();
 
-Console.WriteLine($"Obrigado por suas passagens cadastrar em nosso sistema!");
+Console.ForegroundColor = ConsoleColor.DarkMagenta;
+Console.WriteLine(@$"
+MENU PASSAGEM.COM
 
-Console.WriteLine(@$"MENU PASSAGEM.COM
-      2 - Listar passagens 
-      0 - Sair");
+2 - Listar passagens 
+
+0 - Sair");
+Console.ResetColor();
 
 opcao = char.Parse(Console.ReadLine());
 
@@ -96,19 +108,30 @@ if (opcao == '2')
 {
     for (int i = 0; i <= 4; i++)
     {
-        Console.WriteLine($"Nome {i + 1}º passageiro: {nome[i]}");
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-        Console.WriteLine($"Origem voo do {i + 1}º passageiro: {origem[i]}");
+        Console.WriteLine(@$"
+Nome {i + 1}º passageiro: {nome[i]}");
 
-        Console.WriteLine($"Destino voo do {i + 1}º passageiro: {destino[i]}");
+        Console.WriteLine(@$"
+Origem voo do {i + 1}º passageiro: {origem[i]}");
 
-        Console.WriteLine($"Data voo {i + 1}º passageiro: {data[i]} ");
+        Console.WriteLine(@$"
+Destino voo do {i + 1}º passageiro: {destino[i]}");
+
+        Console.WriteLine(@$"
+Data voo {i + 1}º passageiro: {data[i]} ");
     }
 
-    Console.WriteLine(@$"Obrigado por utilizar nosso sistema");
+    Console.WriteLine(@$"
+Obrigado por utilizar nosso sistema");
+
+    Console.ResetColor();
 }
 
 if (opcao == '0')
 {
+    Console.ForegroundColor = ConsoleColor.Red;
     Console.WriteLine($"Obrigado por utilizar nosso sistema! ");
+    Console.ResetColor();
 }
